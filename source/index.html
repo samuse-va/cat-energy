@@ -5,7 +5,7 @@
     <title>HTML Academy: Cat energy</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="page__body">
+  <body class="page page__body">
     <header class="page-header">
       <a class="page-header__logo">
         <img
@@ -15,6 +15,8 @@
           height="38"
           alt="Довольный пёс"
         />
+      </a>
+      <a class="page-header__logo">
         <img
           class="page-header__logo-text"
           src="./img/logo/logo-text.svg"
@@ -27,7 +29,7 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list visually-hidden">
           <li class="site-list__item site-list__item--active">
             <a>Главная</a>
           </li>
@@ -46,12 +48,18 @@
         Функциональное питание для котов
       </h1>
       <p class="page-main__slogan">Занялся собой? Займись котом!</p>
-      <a class="page-main__button-find button" href="#">Подобрать программу</a>
+      <div class="container">
+        <img class="page-main__food-img" src="./img/main/food.png" width="280"
+        height="270" alt="Банка Cat energy с курицей" / >
+        <a class="page-main__button-find button" href="#"
+          >Подобрать программу</a
+        >
+      </div>
 
-      <section class="programs">
+      <section class="programs container">
         <h2 class="visually-hidden">Программы</h2>
         <ul class="programs-list">
-          <li class="programs__item programs__item--slim">
+          <li class="programs-list__item programs__item--slim">
             <h3 class="programs__title">Похудение</h3>
             <p class="programs__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по
@@ -60,7 +68,7 @@
             </p>
             <a class="programs__button-catalog" href="#">Каталог slim</a>
           </li>
-          <li class="programs__item programs__item--pro">
+          <li class="programs-list__item programs__item--pro">
             <h3 class="programs__title">Набор массы</h3>
             <p class="programs__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
@@ -71,8 +79,8 @@
         </ul>
       </section>
 
-      <section class="advantages">
-        <h2>Как это работает</h2>
+      <section class="advantages container">
+        <h2 class="section-title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--healthy">
             Функциональное питание содержит только полезные питательные
@@ -92,39 +100,46 @@
       </section>
 
       <section class="example">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-          Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
-          этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <ul class="example-results__list">
-          <li class="example-results__list">
-            5 КГ
-            <span>снижение веса</span>
-          </li>
-          <li class="example-results__list">
-            60 ДНЕЙ
-            <span>затрачено времени</span>
-          </li>
-        </ul>
-        <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
-        <img
-          class="example__img-before"
-          src="./img/main/example-before.png"
-          width="280"
-          height="232"
-          alt="Фото Бориса до"
-        />
+        <div class="container">
+          <h2 class="section-title">Живой пример</h2>
+          <p class="example__description">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
+            Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
+            этом он не менял своих привычек и по-прежнему спит по 16 часов в
+            день.
+          </p>
+          <div class="example__info">
+            <ul class="example-results__list">
+              <li class="example-results__list">
+                5 КГ
+                <span>снижение веса</span>
+              </li>
+              <li class="example-results__list">
+                60 ДНЕЙ
+                <span>затрачено времени</span>
+              </li>
+            </ul>
+            <p class="example__costs">Затраты на питание: 15 000 РУБ.</p>
+            <img
+              class="example__img-before"
+              src="./img/main/example-before.png"
+              width="280"
+              height="232"
+              alt="Фото Бориса до"
+            />
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__contacts contacts">
-        <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </p>
+        <div class="page-footer__offer container">
+          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
         <img
           class="contacts__map"
           src="./img/map.png"
@@ -133,16 +148,16 @@
           alt="Карта"
         />
       </div>
-      <a class="page-footer__logo-link">
-        <img
-          class="page-footer__logo-text"
-          src="./img/logo/logo-text.svg"
-          width="101"
-          height="18"
-          alt="Магазин «Кэт энерджи»"
-        />
-      </a>
-      <div class="page-footer__social social">
+      <div class="page-footer__social social container">
+        <a class="page-footer__logo-link">
+          <img
+            class="page-footer__logo-text"
+            src="./img/logo/logo-text.svg"
+            width="101"
+            height="18"
+            alt="Магазин «Кэт энерджи»"
+          />
+        </a>
         <ul class="social__list">
           <li class="social__item">
             <a
@@ -166,13 +181,13 @@
             >
           </li>
         </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a
-          class="copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive"
-          >HTML Academy</a
-        >
+        <div class="page-footer__copyright copyright">
+          <a
+            class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
+            >HTML Academy</a
+          >
+        </div>
       </div>
     </footer>
   </body>
