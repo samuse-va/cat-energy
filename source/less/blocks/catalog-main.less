@@ -1,0 +1,31 @@
+.catalog-main {
+  display: flex;
+  flex-direction: column;
+}
+.catalog-main__item-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "img name"
+    "img table";
+}
+.catalog-main__item-img {
+  grid-area: img;
+}
+.catalog-main__item-name {
+  grid-area: name;
+  color: @special-dark-grey-2;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.catalog-main__item-table {
+  grid-area: table;
+  color: @special-dark-grey;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: Arial, sans-serif;
+}
+.catalog-main__button {
+  width: 100%;
+}

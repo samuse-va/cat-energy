@@ -1,0 +1,36 @@
+.products-more {
+  text-align: center;
+}
+.products-more__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 53px;
+  color: @special-dark-grey-2;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+.products-more__description {
+  font-family: Arial, sans-serif;
+  color: @special-dark-grey;
+  font-size: 12px;
+  line-height: 16px;
+}
+.button-more {
+  .button;
+  color: @special-dark-grey;
+  background-color: @basic-grey;
+  width: 100%;
+}

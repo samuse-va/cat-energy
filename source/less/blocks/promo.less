@@ -1,0 +1,32 @@
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-blend-mode: overlay;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: calc(50% - 39px);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+.promo__img {
+  z-index: -1;
+}
+.promo__title {
+  position: absolute;
+  bottom: 43px;
+  left: calc(50% - 81px);
+  color: @basic-white;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 162px;
+}
