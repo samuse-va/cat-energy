@@ -5,8 +5,18 @@
   color: @special-dark-grey;
 }
 .example__info {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.example__info-facts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .example-results__list {
   display: flex;
@@ -14,4 +24,6 @@
 }
 .example__costs {
   line-height: 20px;
+  align-self: center;
+  margin: 0;
 }
