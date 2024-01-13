@@ -52,107 +52,129 @@
           кота
         </p>
 
-        <fieldset class="form__about-cat">
-          <div class="form__fields-wrapper container">
-            <legend class="visually-hidden">Информация о коте</legend>
-            <label for="name">Имя:* </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Барсик"
-              required
-            />
-            <label for="weight">Вес (кг):* </label>
-            <input
-              type="number"
-              id="weight"
-              name="weight"
-              placeholder="7"
-              required
-            />
-            <label for="age">Возраст (лет): </label>
-            <input type="number" id="age" name="age" placeholder="7" />
-          </div>
-        </fieldset>
+        <div class="form__cat-blocks">
+          <fieldset class="form__about-cat">
+            <div class="form__fields-wrapper container">
+              <legend class="visually-hidden">Информация о коте</legend>
+              <p class="form__field">
+                <label for="name">Имя:* </label>
+                <input
+                  class="form__field-input"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Барсик"
+                  required
+                />
+              </p>
+              <p class="form__field">
+                <label for="weight">Вес (кг):* </label>
+                <input
+                  class="form__field-input"
+                  type="number"
+                  id="weight"
+                  name="weight"
+                  placeholder="7"
+                  required
+                />
+              </p>
+              <p class="form__field">
+                <label for="age">Возраст (лет): </label>
+                <input
+                  class="form__field-input"
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="7"
+                />
+              </p>
+            </div>
+          </fieldset>
 
-        <fieldset class="form__program">
-          <div class="form__fields-wrapper container">
-            <legend class="visually-hidden">Программа:</legend>
-            <ul class="form__list">
-              <li class="form__option">
-                <input
-                  class="form__option-radio visually-hidden"
-                  type="radio"
-                  id="program-slim"
-                  name="program"
-                  value="slim"
-                  checked
-                />
-                <label for="program-slim">Похудение</label>
-              </li>
-              <li class="form__option">
-                <input
-                  class="form__option-radio visually-hidden"
-                  type="radio"
-                  id="program-pro"
-                  name="program"
-                  value="pro"
-                />
-                <label for="program-pro">Набор массы</label>
-              </li>
-              <li class="form__option">
-                <input
-                  class="form__option-radio visually-hidden"
-                  type="radio"
-                  id="program-unknown"
-                  name="program"
-                  value="unknown"
-                />
-                <label for="program-unknown">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
-          </div>
-        </fieldset>
+          <fieldset class="form__program">
+            <div class="form__fields-wrapper container">
+              <legend class="visually-hidden">Программа:</legend>
+              <ul class="form__list">
+                <li class="form__option">
+                  <input
+                    class="form__option-radio visually-hidden"
+                    type="radio"
+                    id="program-slim"
+                    name="program"
+                    value="slim"
+                    checked
+                  />
+                  <label for="program-slim">Похудение</label>
+                </li>
+                <li class="form__option">
+                  <input
+                    class="form__option-radio visually-hidden"
+                    type="radio"
+                    id="program-pro"
+                    name="program"
+                    value="pro"
+                  />
+                  <label for="program-pro">Набор массы</label>
+                </li>
+                <li class="form__option">
+                  <input
+                    class="form__option-radio visually-hidden"
+                    type="radio"
+                    id="program-unknown"
+                    name="program"
+                    value="unknown"
+                  />
+                  <label for="program-unknown">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+        </div>
 
         <fieldset class="form__about-client">
           <legend class="form__legend-item">
             Контактные данные (владельца кота)
           </legend>
-          <div class="form__fields-wrapper container">
-            <label for="email">E-mail:* </label>
-            <input
-              class="form__email"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="kuklachev@gmail.com"
-              required
-            />
-            <label for="tel">Телефон:* </label>
-            <input
-              class="form__tel"
-              type="tel"
-              id="tel"
-              name="tel"
-              placeholder="8 (960) 900-60-90"
-              required
-            />
+          <div class="form__fields-wrapper form__about-fields container">
+            <p class="form__field">
+              <label for="email">E-mail:* </label>
+              <input
+                class="form__field-input form__email"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="kuklachev@gmail.com"
+                required
+              />
+            </p>
+            <p class="form__field">
+              <label for="tel">Телефон:* </label>
+              <input
+                class="form__field-input form__tel"
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="8 (960) 900-60-90"
+                required
+              />
+            </p>
           </div>
         </fieldset>
 
-        <label for="comment" class="form__legend-item">Комментарий </label>
-        <textarea
-          class="form__comment container"
-          id="comment"
-          name="comment"
-          placeholder="Расскажите обо всех повадках кота"
-        ></textarea>
+        <p class="form__field form__field-comment">
+          <label for="comment" class="form__legend-item">Комментарий </label>
+          <textarea
+            class="form__comment container"
+            id="comment"
+            name="comment"
+            placeholder="Расскажите обо всех повадках кота"
+          ></textarea>
+        </p>
 
         <fieldset class="form__add">
           <legend class="form__legend-item">Дополнительно</legend>
           <div class="form__fields-wrapper container">
-            <ul class="form__list">
+            <ul class="form__list form__add-list">
               <li class="form__option">
                 <input
                   class="form__option-checkbox visually-hidden"
@@ -194,8 +216,10 @@
           </div>
         </fieldset>
 
-        <button type="submit" class="button">Отправить заявку</button>
-        <p class="form__note">* — Обязательные поля</p>
+        <div class="form__submit container">
+          <button type="submit" class="button">Отправить заявку</button>
+          <p class="form__note">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
 
