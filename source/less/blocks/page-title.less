@@ -1,7 +1,15 @@
 .page-title {
   min-width: 250px;
+  max-width: 384px;
   text-align: center;
   font-size: 36px;
   line-height: 36px;
-  // color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 414px;
+    text-align: left;
+  }
 }
