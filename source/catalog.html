@@ -9,7 +9,7 @@
   <body class="page page__body">
     <header class="page-header container page-header--closed page-header--nojs">
       <div class="page-header__logo-wrapper">
-        <a class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
           <img
             class="page-header__logo-img"
             src="./img/logo/logo.svg"
@@ -18,12 +18,21 @@
             alt="Довольный пёс"
           />
         </a>
-        <a class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
           <img
             class="page-header__logo-text"
             src="./img/logo/logo-text.svg"
             width="101"
             height="18"
+            alt="Магазин «Кэт энерджи»"
+          />
+        </a>
+        <a href="index.html" class="page-header__logo page-header__logo-big">
+          <img
+            class="page-header__logo-full"
+            src="./img/logo/logo-full.svg"
+            width="174"
+            height="52"
             alt="Магазин «Кэт энерджи»"
           />
         </a>
@@ -34,11 +43,11 @@
       <nav class="main-nav">
         <div>
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
             <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>Каталог продукции</a>
             </li>
             <li class="site-list__item">
               <a href="form.html">Подбор программы</a>
@@ -300,10 +309,8 @@
             <div class="catalog-additional__item-info">
               <span class="catalog-additional__item-quantity"
                 >1 упаковка (100 г)
-                </span>
-              <span class="catalog-additional__item-price">
-                200 Р.
               </span>
+              <span class="catalog-additional__item-price"> 200 Р. </span>
             </div>
             <button class="catalog-additional__button button" type="button">
               Заказать
@@ -417,5 +424,23 @@
         >
       </div>
     </footer>
+    <script>
+      const header = window.document.querySelector(".page-header");
+      const navToggle = window.document.querySelector(
+        ".page-header__nav-toggle"
+      );
+
+      header.classList.remove("page-header--nojs");
+
+      navToggle.addEventListener("click", function () {
+        if (header.classList.contains("page-header--closed")) {
+          header.classList.remove("page-header--closed");
+          header.classList.add("page-header--opened");
+        } else {
+          header.classList.remove("page-header--opened");
+          header.classList.add("page-header--closed");
+        }
+      });
+    </script>
   </body>
 </html>
