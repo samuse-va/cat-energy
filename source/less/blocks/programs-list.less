@@ -1,3 +1,8 @@
+.programs {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
 .programs-list {
   display: flex;
   flex-direction: column;
@@ -8,10 +13,18 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     gap: 80px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .programs-list__item {
   display: grid;
   padding: 24px 20px 18px;
   background-color: @basic-grey;
+  @media (min-width: @tablet-width) {
+    padding: 77px 62px 53px 52px;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 41px 51px 55px 52px;
+  }
 }
