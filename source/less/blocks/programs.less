@@ -26,19 +26,56 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 211px;
+      background-size: cover;
+      left: unset;
+      right: 0;
+    }
     @media (min-width: @desktop-width) {
       width: 100px;
       height: 106px;
       background-size: cover;
+      right: unset;
+      left: 0;
     }
   }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    padding: 0;
   }
   @media (min-width: @desktop-width) {
     padding: 36px 0 34px 124px;
+  }
+}
+.programs__title-pro {
+  padding-left: 71px;
+  &::before {
+    width: 67px;
+    left: -7px;
+    background-image: url("../img/main/cat-pro.svg");
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 200px;
+      left: unset;
+      right: 0;
+    }
+    @media (min-width: @desktop-width) {
+      width: 142px;
+      height: 106px;
+      right: unset;
+      left: -19px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 30px 0 34px 162px;
   }
 }
 .programs__description {
@@ -57,9 +94,11 @@
     line-height: 24px;
     border: none;
     padding: 0;
+    padding-right: 316px;
   }
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     max-width: 467px;
+    padding: 0;
   }
 }
 .programs__button-catalog {

@@ -1,5 +1,11 @@
 .example {
   background-color: @example-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    border-top: 1px solid @menu-border;
+    background-color: @basic-white;
+  }
 }
 .example__description {
   color: @special-dark-grey;
