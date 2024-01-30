@@ -1,5 +1,6 @@
 .example {
   background-color: @example-grey;
+  padding-top: 25px;
 
   @media (min-width: @tablet-width) {
     padding-top: 43px;
@@ -8,7 +9,13 @@
   }
 }
 .example__description {
+  font-family: Arial, sans-serif;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .example__info {
   display: flex;
