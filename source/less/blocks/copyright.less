@@ -1,7 +1,37 @@
 .copyright {
   margin-top: 22px;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    width: unset;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  color: @special-dark-grey;
+
+  svg {
+    width: 27px;
+    height: 34px;
+    fill: @special-dark-grey;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 22px;
+    }
+  }
+
+  &:hover svg {
+    fill: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
