@@ -1,5 +1,6 @@
-// .page-footer {
-// }
+.page-footer__contacts {
+  position: relative;
+}
 .page-footer__offer {
   display: grid;
   grid-template-columns: 139px 139px; // ?
@@ -11,6 +12,12 @@
     padding: 56px 70px;
   }
   @media (min-width: @desktop-width) {
+    z-index: 1;
+    position: absolute;
+    top: 95px;
+    left: 110px;
     padding: 56px 80px;
+    column-gap: 87px;
+    background-color: @basic-white;
   }
 }
