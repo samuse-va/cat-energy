@@ -7,10 +7,16 @@
     padding-top: 43px;
     padding-bottom: 56px;
     border-top: 1px solid @menu-border;
-    background-color: @basic-white;
+    background: linear-gradient(
+      @basic-white 0%,
+      @basic-white 60%,
+      @example-grey 60%
+    );
   }
   @media (min-width: @desktop-width) {
+    padding-top: 0;
     padding-bottom: 0;
+    border: none;
   }
 }
 .example__wrapper {
@@ -50,6 +56,7 @@
   @media (min-width: @desktop-width) {
     margin-top: 69px;
     flex-direction: row;
+    position: relative;
   }
 }
 .example-results__list {
@@ -167,20 +174,90 @@
   }
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 .example__img-before {
-  width: 592px;
-  height: 511px;
+  width: 280px;
+  height: 232px;
+  @media (min-width: @tablet-width) {
+    width: 592px;
+    height: 511px;
+  }
 }
-.example__filter {
+.example__filter-wrapper {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 49px 1fr 49px;
+  column-gap: 13px;
+  align-items: center;
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    grid-template-columns: 70px 1fr 70px;
+    column-gap: 23px;
+  }
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 49px 1fr 49px;
+  }
+}
+.example__filter-text {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  justify-self: center;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid @special-2-grey;
+  }
+  &:active {
+    border-bottom: none;
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 6px;
     font-size: 20px;
     border-bottom: 1px dotted @special-grey;
+  }
+}
+.example__filter {
+  display: grid;
+  align-items: center;
+  height: 8px;
+  padding: 3px 6px;
+  border: 1px solid @special-grey;
+  border-radius: 8px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    height: 6px;
+    padding: 0;
+    border: none;
+    background-color: @filter-grey;
+  }
+}
+.example__filter-toggle {
+  height: 6px;
+  width: 50%;
+  background-color: @basic-green;
+  border-radius: 8px;
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    left: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: @basic-green;
+    border: 13px solid @basic-white;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px @special-grey;
+
+    &:hover {
+      box-shadow: 0 2px 4px @special-grey;
+    }
+    &:active {
+      box-shadow: 0 2px 4px @special-grey, 0 0 0 1px @basic-green;
+    }
   }
 }
