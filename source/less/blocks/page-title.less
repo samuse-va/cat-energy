@@ -1,7 +1,4 @@
 .page-title {
-  min-width: 250px;
-  max-width: 384px;
-  text-align: center;
   font-size: 36px;
   line-height: 36px;
 
@@ -9,16 +6,15 @@
     color: @basic-black;
     font-size: 60px;
     line-height: 60px;
-    max-width: 414px;
-    text-align: left;
   }
 }
-.page-title--not-main {
-  font-size: 36px;
-  line-height: 36px;
+.page-title--main {
+  min-width: 250px;
+  max-width: 384px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    font-size: 60px;
-    line-height: 60px;
+    max-width: 414px;
+    text-align: left;
   }
 }
