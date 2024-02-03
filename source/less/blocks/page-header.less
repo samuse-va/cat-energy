@@ -14,7 +14,10 @@
   }
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-
+  }
+}
+.page-header--main {
+  @media (min-width: @desktop-width) {
     &::after {
       content: "";
       position: absolute;
@@ -40,6 +43,11 @@
     height: 65px;
     padding: 0 20px;
     align-items: center;
+  }
+}
+.page-header--not-main {
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @program-border;
   }
 }
 .page-header__logo {
