@@ -58,16 +58,18 @@
     </header>
 
     <main class="form-page">
-      <h1 class="form-page__title page-title container">Подбор программы</h1>
+      <h1 class="form-page__title page-title form__container">
+        Подбор программы
+      </h1>
       <form class="form" method="get" action="https://echo.htmlacademy.ru">
-        <p class="form__description container">
+        <p class="form__description form__container">
           Заполните анкету, и мы подберем <br />программу питания для вашего
           кота
         </p>
 
         <div class="form__cat-blocks">
           <fieldset class="form__about-cat">
-            <div class="form__fields-wrapper form__fileds-text container">
+            <div class="form__fields-wrapper form__fileds-text">
               <legend class="visually-hidden">Информация о коте</legend>
               <p class="form__field">
                 <label class="form__text-label" for="name">Имя:* </label>
@@ -147,13 +149,13 @@
         </div>
 
         <fieldset class="form__about-client form__green-line">
-          <legend class="form__legend-item">
+          <legend class="form__legend-item form__legend-item--client">
             Контактные данные (владельца кота)
           </legend>
           <div
-            class="form__fields-wrapper form__fileds-text form__about-fields container"
+            class="form__fields-wrapper form__fileds-text form__about-fields form__container"
           >
-            <p class="form__field">
+            <p class="form__field form__field-email">
               <label class="form__text-label" for="email">E-mail:* </label>
               <input
                 class="form__field-input form__email"
@@ -164,7 +166,7 @@
                 required
               />
             </p>
-            <p class="form__field">
+            <p class="form__field form__field-tel">
               <label class="form__text-label" for="tel">Телефон:* </label>
               <input
                 class="form__field-input form__tel"
@@ -178,10 +180,10 @@
           </div>
         </fieldset>
 
-        <p class="form__field-comment form__green-line">
-          <label for="comment" class="form__legend-item">Комментарий </label>
+        <p class="form__field-comment form__green-line form__green-line--comment">
+          <label for="comment" class="form__legend-item form__legend-item--comment">Комментарий </label>
           <textarea
-            class="form__comment container"
+            class="form__comment form__container"
             id="comment"
             name="comment"
             placeholder="Расскажите обо всех повадках кота"
@@ -190,7 +192,7 @@
 
         <fieldset class="form__add form__green-line">
           <legend class="form__legend-item">Дополнительно</legend>
-          <div class="form__fields-wrapper form__add-wrapper container">
+          <div class="form__fields-wrapper form__add-wrapper form__container">
             <ul class="form__list form__add-list">
               <li class="form__option">
                 <input
@@ -233,8 +235,10 @@
           </div>
         </fieldset>
 
-        <div class="form__submit container">
-          <button type="submit" class="button form__submit-button">Отправить заявку</button>
+        <div class="form__submit form__container">
+          <button type="submit" class="button form__submit-button">
+            Отправить заявку
+          </button>
           <p class="form__note">* — Обязательные поля</p>
         </div>
       </form>
