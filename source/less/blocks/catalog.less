@@ -1,7 +1,19 @@
-.caatalog {
+.catalog {
+  margin-top: 27px;
+  margin-bottom: 35px;
   font-family: "Oswaldregular", "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 64px;
+    margin-bottom: 76px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 74px;
+    margin-bottom: 86px;
+  }
 }
 .catalog__title {
+  margin: 0;
   font-size: 36px;
   line-height: 36px;
 }

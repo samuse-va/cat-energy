@@ -54,7 +54,14 @@
 }
 .catalog-additional__button {
   grid-area: button;
+  margin-top: 15px;
+  padding: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+  }
   @media (min-width: @desktop-width) {
+    margin-top: 0;
     width: 244px;
   }
 }
