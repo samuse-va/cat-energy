@@ -4,19 +4,29 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    margin-top: 84px;
+    row-gap: 60px;
+    margin: 84px 30px 0;
   }
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
+    row-gap: 63px;
+    margin: 84px 110px 0;
   }
 }
 .catalog-main__item {
-  padding: 19px 20px 22px;
+  padding: 19px 20px 25px;
   border-top: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
     border: none;
+    // height: 464px;
+    padding: 8px 36px 39px;
+    background: linear-gradient(
+      @basic-white 0%,
+      @basic-white 16%,
+      @example-grey 16%
+    );
   }
 }
 .catalog-main__item-info {
@@ -26,6 +36,7 @@
     "img name"
     "img table";
   align-items: center;
+  row-gap: 18px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
@@ -34,19 +45,56 @@
       "name"
       "table";
     justify-items: center;
-    background-color: @basic-grey;
+    row-gap: unset; // ?
   }
 }
 .catalog-main__item-img {
   grid-area: img;
+  justify-self: center;
+}
+.catalog-main__item-small {
+  width: 68px;
+  height: 86px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 28px;
+    width: 161px;
+    height: 172px;
+  }
+}
+.catalog-main__item-big {
+  width: 84px;
+  height: 100px;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 206px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 172px;
+    height: 202px;
+  }
 }
 .catalog-main__item-name {
   grid-area: name;
   color: @special-dark-grey-2;
+  width: 76px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 34px;
+    width: 145px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    line-height: 21px;
+  }
 }
 .catalog-main__item-table {
   grid-area: table;
@@ -54,6 +102,13 @@
   font-size: 12px;
   line-height: 16px;
   font-family: Arial, sans-serif;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+    font-size: 16px;
+  }
+  // @media (min-width: @desktop-width) {
+  // }
 }
 .catalog-main__button {
   margin-top: 13px;
