@@ -1,9 +1,10 @@
 .promo {
   position: relative;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
   background-color: rgba(104, 183, 56, 0.85);
-  background-blend-mode: overlay;
+
   &::after {
     content: "";
     position: absolute;
@@ -14,12 +15,51 @@
     background-image: url("../img/gift.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @media (min-width: @tablet-width) {
+      left: 77px;
+      width: 80px;
+      height: 82px;
+    }
+    @media (min-width: @desktop-width) {
+      top: 56px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+    height: 200px;
+    background: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../../img/catalog/cat-bag-mid.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    width: 245px;
+    height: auto;
+    background: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url("../../img/catalog/cat-bag-big.png");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 .promo__img {
   z-index: -1;
+  align-self: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 .promo__title {
+  margin: 0;
   position: absolute;
   bottom: 43px;
   left: calc(50% - 81px);
@@ -29,4 +69,16 @@
   font-family: Arial, sans-serif;
   text-align: center;
   width: 162px;
+
+  @media (min-width: @tablet-width) {
+    right: 124px;
+    bottom: 69px;
+    left: unset;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: unset;
+    bottom: 42px;
+    left: calc(50% - 81px);
+  }
 }

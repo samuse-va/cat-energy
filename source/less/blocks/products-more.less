@@ -3,7 +3,16 @@
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    height: 386px;
+    align-self: flex-end;
+    flex-direction: column;
+    align-items: center;
     border: 2px solid @basic-grey;
+    background: center;
+  }
+  @media (min-width: @desktop-width) {
+    height: 394px;
   }
 }
 .products-more__title {
@@ -29,12 +38,17 @@
     background-position: 0 0;
 
     @media (min-width: @tablet-width) {
+      left: calc(50% - 30px);
       width: 60px;
       height: 60px;
+      background-size: cover;
     }
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 44px;
+    padding-top: 109px;
+    width: 134px;
     font-size: 20px;
     line-height: 22px;
   }
@@ -49,6 +63,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 23px;
+    width: 167px;
     font-size: 16px;
     line-height: 18px;
   }
@@ -61,7 +76,18 @@
   background-color: @basic-grey;
   width: 100%;
 
+  &:hover {
+    color: @special-dark-grey;
+    background-color: #ebebeb;
+  }
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
-    margin-top: 87px;
+    margin-top: 92px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 100px;
   }
 }

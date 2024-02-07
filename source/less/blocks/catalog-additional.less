@@ -1,13 +1,54 @@
-.catalog-additional__wrapper {
+.catalog-additional__green-line {
+  position: relative;
+  margin-top: 25px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 0;
+    top: 50%;
+    background-color: @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 68px;
+  }
   @media (min-width: @desktop-width) {
-    display: flex;
+    margin-top: 76px;
   }
 }
 .catalog-additional__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: max-content;
+  padding-right: 22px;
+  padding-left: 20px;
   font-size: 24px;
   line-height: 24px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    padding-right: 36px;
+    padding-left: 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+  }
+}
+.catalog-additional__wrapper {
+  margin-top: 36px;
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-top: 80px;
+  }
 }
 .catalog-additional__list {
+  border-bottom: 1px solid @special-grey;
   @media (min-width: @desktop-width) {
     margin-right: 80px;
     flex-grow: 1;
@@ -19,13 +60,26 @@
     "name"
     "info"
     "button";
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid @special-grey;
+
   @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr max-content;
     grid-template-areas:
       "name info"
       "button button";
+    padding: 26px 38px 28px;
+    border-right: 1px solid @special-grey;
+    border-left: 1px solid @special-grey;
   }
   @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 288px auto;
     grid-template-areas: "name info button";
+    padding: 15px 0 17px;
+    align-items: center;
+    border-right: none;
+    border-left: none;
   }
 }
 .catalog-additional__item-name {
@@ -35,12 +89,26 @@
   line-height: 16px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .catalog-additional__item-info {
   grid-area: info;
   display: flex;
+  margin-top: 13px;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    gap: 49px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 38px;
+  }
 }
 .catalog-additional__item-quantity,
 .catalog-additional__item-price {
@@ -48,9 +116,21 @@
   font-size: 14px;
   line-height: 14px;
   font-family: Arial, sans-serif;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 .catalog-additional__item-price {
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+  }
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 .catalog-additional__button {
   grid-area: button;
