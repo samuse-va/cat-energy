@@ -13,6 +13,18 @@
   background-position: top;
   background-size: auto 302px;
 
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(
+        rgba(104, 183, 56, 0.85),
+        rgba(104, 183, 56, 0.85)
+      ),
+      url(../../img/main/cat-min@2x.png),
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto 302px;
+  }
+
   @media (max-width: @mobile-width-only) {
     color: @basic-white;
   }
@@ -22,15 +34,25 @@
     align-items: flex-start;
     padding-left: 117px;
     height: 874px;
-    background: url(../../img/main/food.png);
+    background-image: url(../../img/main/food.png);
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/main/food@2x.png);
+      background-size: 709px auto;
+    }
   }
   @media (min-width: @desktop-width) {
     padding-left: 190px;
     height: 555px;
     background-image: url(../../img/main/food-standard.png);
     background-position: top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../../img/main/food-standard@2x.png);
+      background-size: 552px auto;
+    }
   }
 }
 .page-main__title {
