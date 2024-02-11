@@ -47,11 +47,23 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/min@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
     height: 400px;
     background-image: url("../../img/map/mid.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/mid@2x.png");
+    }
   }
   @media (min-width: @desktop-width) {
     background-image: url("../../img/map/max.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/max@2x.png");
+    }
   }
 }

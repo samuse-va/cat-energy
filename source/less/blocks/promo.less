@@ -36,6 +36,17 @@
       url("../../img/catalog/cat-bag-mid.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../../img/catalog/cat-bag-mid@2x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 200px;
+    }
   }
   @media (min-width: @desktop-width) {
     margin-top: 0;
@@ -48,6 +59,15 @@
       url("../../img/catalog/cat-bag-big.png");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background: linear-gradient(
+          rgba(104, 183, 56, 0.85),
+          rgba(104, 183, 56, 0.85)
+        ),
+        url("../../img/catalog/cat-bag-big@2x.png");
+      background-size: auto 289px;
+    }
   }
 }
 .promo__img {
