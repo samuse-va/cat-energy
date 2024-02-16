@@ -75,6 +75,13 @@
       font-family: "Oswaldregular", "Arial", sans-serif;
       color: @special-dark-grey;
     }
+    &:focus {
+      outline: none;
+      border: 2px solid @special-dark-grey;
+    }
+    // &:invalid {
+    //   border: 2px solid @error;
+    // }
   }
 
   @media (min-width: @tablet-width) {
@@ -228,6 +235,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.form__option-radio:disabled + label::before,
+.form__option-checkbox:disabled + label::before {
+  opacity: 0.3;
+}
 .form__about-fields {
   margin-top: 35px;
 
@@ -255,40 +266,43 @@
     margin-top: 70px;
   }
 }
-.form__field-email {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 19px;
-    height: 14px;
-    top: 16px;
-    right: 16px;
-    background-image: url("../../img/email.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      right: 19px;
-    }
-  }
-}
+.form__field-email,
 .form__field-tel {
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 13px;
-    right: 13px;
-    background-image: url("../../img/phone.svg");
-    background-repeat: no-repeat;
+}
+.form__email-img {
+  position: absolute;
+  width: 19px;
+  height: 14px;
+  top: 16px;
+  right: 16px;
+  stroke: @special-dark-grey-2;
 
-    @media (min-width: @tablet-width) {
-      top: 12px;
-      right: 16px;
-    }
+  @media (min-width: @tablet-width) {
+    right: 19px;
   }
+}
+// .form__email:invalid + svg {
+//   stroke: @error;
+// }
+.form__email:focus + svg {
+  stroke: @basic-green;
+}
+.form__tel-img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 13px;
+  right: 13px;
+  fill: @special-dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    top: 12px;
+    right: 16px;
+  }
+}
+.form__tel:focus + svg {
+  fill: @basic-green;
 }
 .form__field-comment {
   margin-top: 24px;
@@ -313,6 +327,10 @@
   &::placeholder {
     font-family: "Oswaldregular", "Arial", sans-serif;
     color: @special-dark-grey;
+  }
+  &:focus {
+    outline: none;
+    border: 2px solid @special-dark-grey;
   }
 
   @media (min-width: @tablet-width) {
