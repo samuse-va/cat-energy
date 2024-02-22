@@ -17,15 +17,24 @@ const del = require("del");
 // Styles
 
 const styles = () => {
-  return gulp
-    .src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(less())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
+  return (
+    gulp
+      .src("source/less/style.less")
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      .pipe(less())
+      .pipe(
+        postcss([
+          autoprefixer(),
+          // , csso()
+        ])
+      )
+      // .pipe(rename("style.min.css"))
+      .pipe(sourcemap.write("."))
+      .pipe(gulp.dest("source/css"))
+      // .pipe(gulp.dest("build/css"))
+      .pipe(sync.stream())
+  );
 };
 
 exports.styles = styles;
@@ -34,7 +43,7 @@ exports.styles = styles;
 
 const html = () => {
   return gulp
-    .src("source/**/*.html")
+    .src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 };
@@ -121,12 +130,18 @@ exports.copy = copy;
 
 // Clean
 
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
 // Server
 
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "source",
+      baseDir: "source", // "build"
     },
     cors: true,
     notify: false,
@@ -148,7 +163,29 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  // gulp.watch("source/js/script.js", gulp.series(scripts))
   gulp.watch("source/*.html").on("change", sync.reload);
 };
 
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(styles, html, scripts, sprite, createWebp)
+);
+
+exports.build = build;
+
+// Default
+
 exports.default = gulp.series(styles, server, watcher);
+
+// exports.default = gulp.series(
+//   clean,
+//   copy,
+//   copyImages,
+//   gulp.parallel(styles, html, scripts, sprite, createWebp),
+//   gulp.series(server, watcher)
+// );
